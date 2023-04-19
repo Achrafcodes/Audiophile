@@ -1,0 +1,22 @@
+# ignore built files
+build/
+dist/
+lib/
+public/
+
+# ignore configuration files
+node_modules/
+package-lock.json
+yarn.lock
+.eslintrc.js
+.prettierrc.js
+
+# ignore test files
+__tests__/
+test.js
+*.test.js
+
+# ignore other files/directories
+coverage/
+logs/
+temp/
