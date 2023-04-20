@@ -1,7 +1,10 @@
-import React from 'react'
+import { Provider } from "react";
+import store from "./redux/store";
 
-export default function App() {
-  return (
-    <div>App</div>
+const App = function(){
+  return(
+    <Provider store={store}></Provider>
+
   )
 }
+export default App
