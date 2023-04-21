@@ -1,21 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
+import productsData from '../Product.json';
 
-let ProductSlice = createSlice({
-  name:"Product",
-  initialState:{
-
-      "id":"",
-      "name":"",
-      "description":"",
-      "price":"",
-      "image":"",
-       "category":"",
-  },
-  reducers:{
-    products:(state,actions)=>{
-      state.value = actions.payload
+const productsSlice = createSlice({
+  name: 'products',
+  initialState: { products: productsData.products, selectedProduct: null },
+  reducers: {
+    selectProduct: (state, action) => {
+      state.selectedProduct = state.products.find(
+        product => product.id === action.payload
+      );
     }
   }
-})
-export const {products} = ProductSlice.actions;
-export default ProductSlice.reducer
+});
+
+export const { selectProduct } = productsSlice.actions;
+
+export default productsSlice.reducer;
