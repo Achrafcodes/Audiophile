@@ -1,12 +1,13 @@
 import './App.css';
 import { Provider } from 'react-redux';
-import Text from './Text';
 import store from './redux/store';
-
+import Hero from './components/Hero';
+import Item from './Item';
 function App() {
   return (
     <Provider store={store}>
-      <Text id={1} />
+      <Item id={1} />
+      <Item id={12} />
     </Provider>
   );
 }
