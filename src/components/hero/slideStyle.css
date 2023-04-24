@@ -1,0 +1,15 @@
+.slidesContainer {
+  display: flex;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+.dark {
+  position: absolute;
+
+  width: 100%;
+  padding: 1em;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}

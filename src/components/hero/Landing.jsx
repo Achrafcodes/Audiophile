@@ -1,36 +1,17 @@
 import React from 'react';
-import Banner from './Banners';
-import catbanner from './Home/catbanner-01.jpg';
-import WatchBanner from './Home/catbanner-02.jpg';
-import EarpodBanner from './Home/catbanner-03.jpg';
-import PhoneBanner from './Home/catbanner-04.jpg';
+import Slider from './Slider';
+import Image1 from './Home/main-banner-1.jpg';
+import Image2 from './Home/main-banner.jpg';
 
-import './Landing.css';
-function Landing() {
+function App() {
+  const images = [Image1, Image2, Image2];
+  const captions = ['Imagedsfadfds 1 text', 'Image 2 dsfsdtext'];
+
   return (
-    <div className="hero">
-      <div className="main-banner">
-        <h1>testoo</h1>
-      </div>
-      <ul className="image-list">
-        <li>
-          <Banner backgroundImage={catbanner} h1="hello world" />
-        </li>
-        <li>
-          {' '}
-          <Banner backgroundImage={catbanner} h1="hello world" />
-        </li>
-        <li>
-          {' '}
-          <Banner backgroundImage={catbanner} h1="hello world" />
-        </li>
-        <li>
-          {' '}
-          <Banner backgroundImage={catbanner} h1="hello world" />
-        </li>
-      </ul>
+    <div className="App">
+      <Slider images={images} captions={captions} />
     </div>
   );
 }
 
-export default Landing;
+export default App;
