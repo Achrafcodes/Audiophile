@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectItemById } from './redux/itemsSlice';
+import { selectItemById } from './redux/ProductSlice';
 function ProductDetails({ id }) {
   const item = useSelector(state => selectItemById(state, id));
 

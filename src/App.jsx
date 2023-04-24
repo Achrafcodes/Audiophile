@@ -1,13 +1,14 @@
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import Hero from './components/Hero';
 import Item from './Item';
+import Landing from './components/hero/Landing';
+import NavBar from './components/layouts/NavBar';
 function App() {
   return (
     <Provider store={store}>
-      <Item id={1} />
-      <Item id={12} />
+      <NavBar />
+      <Landing />
     </Provider>
   );
 }

@@ -1,0 +1,14 @@
+.Container {
+  @apply flex justify-between;
+}
+.nav-links {
+  @apply flex gap-5;
+  align-items: center;
+  width: 500px;
+  justify-content: space-between;
+}
+a {
+  @apply text-xl;
+}
+.Container h1 {
+}

@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+/* Box sizing reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global font settings */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--color-secondary-light);
+  padding: 1rem 2rem;
+
+  font-weight: 400;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+button,
+input[type='submit'] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type='submit']:hover {
+  background-color: #0069d9;
+}
+
+/* Form inputs */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Responsive utility classes */
+@media screen and (max-width: 576px) {
+  .sm\:text-center {
+    text-align: center;
+  }
+
+  .sm\:mt-4 {
+    margin-top: 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+:root {
+  /* Base Colors */
+  --color-primary: #bdbdc7;
+  --color-secondary-light: #f7f7f7;
+  --color-secondary: #e0e0e0;
+  --color-secondary-dark: #333333;
 
-.App-link {
-  color: #61dafb;
-}
+  /* Accent Colors */
+  --color-accent-red: #e63946;
+  --color-accent-blue: #457b9d;
+  --color-accent-darkblue: #1d3557;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* Font */
+  --font-primary: 'Open Sans', sans-serif;
+
+  /* Spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+
+  /* Border */
+  --border-radius: 4px;
+
+  /* Box Shadow */
+  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-family: 'Jost', sans-serif;
+  color: var(--color-accent-darkblue);
 }
