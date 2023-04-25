@@ -4,7 +4,7 @@ import SlideImage from './SlideImage';
 /**
  * A slider component that displays a series of images and
  * associated captions in a sliding carousel.
- *
+ * tf
  * @param {Array} images - An array of image URLs to be displayed in the slider.
  * @param {Array} captions - An array of captions to be displayed with each image.
  * @param {number} interval - The interval (in milliseconds) at which the slider
