@@ -9,7 +9,7 @@ import SlideImage from './SlideImage';
  * @param {Array} captions - An array of captions to be displayed with each image.
  * @param {number} interval - The interval (in milliseconds) at which the slider
  * should automatically advance to the next image.
- */
+//  */
 function Slider({ images, captions, interval = 10000 }) {
   // State variables to keep track of the current image index and caption
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
