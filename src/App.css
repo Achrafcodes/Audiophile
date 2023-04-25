@@ -157,3 +157,8 @@ textarea:focus {
   font-family: 'Jost', sans-serif;
   color: var(--color-accent-darkblue);
 }
+button {
+  background-color: #1d3557;
+  width: 90px;
+  font-weight: 700;
+}

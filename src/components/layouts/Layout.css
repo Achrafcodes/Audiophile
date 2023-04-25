@@ -9,6 +9,16 @@
 }
 a {
   @apply text-xl;
+  font-size: 25px;
+  font-weight: 700;
 }
-.Container h1 {
+
+.logo {
+  font-family: 'Jost', sans-serif;
+  color: var(--color-accent-darkblue);
+}
+button {
+  background-color: #1d3557;
+  width: 90px;
+  font-weight: 700;
 }
