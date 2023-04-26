@@ -13,3 +13,4 @@ function SlideImage({ image, caption, isVisible }) {
 }
 // test
 export default SlideImage;
+test;
