@@ -27,7 +27,8 @@ function Landing() {
       </div>
       <div className=" texts">
         <h1 className="tittle">
-          "Power Up Your Projects with the Best Developer Tools and Resources"
+          "Power Up Your Projects with the{' '}
+          <span className="span">Best Developer Tools and Resources</span>"
         </h1>{' '}
         <p className="discription">
           Find the electronics and gadgets you need to take your coding skills
