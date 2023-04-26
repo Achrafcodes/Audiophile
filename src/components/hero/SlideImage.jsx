@@ -11,6 +11,5 @@ function SlideImage({ image, caption, isVisible }) {
     </div>
   );
 }
-// test git
-
+// test
 export default SlideImage;
