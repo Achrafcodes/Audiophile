@@ -1,15 +1,20 @@
+.Landing {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
 .slidesContainer {
   display: flex;
   max-width: 1200px;
   position: relative;
   border-radius: 9px;
-  margin-top: 50px;
+  margin-top: 30px;
   overflow: hidden;
 }
 .CaptionsStyle h1 {
   position: absolute;
   left: 5%;
-  top: 20%;
+  top: 5%;
   width: 50%;
   font-family: monospace;
   transform: translateX(-5%);
@@ -30,5 +35,61 @@
   }
 }
 .imageStyle {
-  width: 1200px;
+  width: 1000px;
+  height: 520px;
+}
+.small-banner {
+  position: relative;
+  border-radius: 9px;
+}
+.small-banner h1 {
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  width: 50%;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  transform: translateX(-5%);
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 2;
+  color: #1d3557;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+.images {
+  margin-top: 30px;
+  cursor: pointer;
+
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.images img {
+  height: 250px;
+  border-radius: 9px;
+
+  width: 400px;
+}
+.tittle {
+  font-size: 2.5em;
+  font-weight: 500;
+  width: 70%;
+  color: #1d3557;
+  font-size: 4rem;
+  text-align: left;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.texts button {
+  width: 400px;
+  font-size: 23px;
+}
+.discription {
+  max-width: 70%;
+  margin-bottom: 1rem;
+  color: #457b9d;
+  font-size: 1.5rem;
+  font-family: 'Jost', sans-serif;
 }
