@@ -215,6 +215,6 @@ textarea:focus {
 .texts h1 {
   font-family: 'Ubuntu', sans-serif;
 }
-.hidden {
-  display: none;
+.blur {
+  filter: blur(5px);
 }

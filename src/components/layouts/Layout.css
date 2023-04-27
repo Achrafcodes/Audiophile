@@ -1,5 +1,6 @@
 .nav-Container {
   @apply flex justify-between;
+  align-items: center;
   padding: 0 50px;
 }
 .nav-links {
@@ -22,4 +23,46 @@ button {
   background-color: #1d3557;
   width: 90px;
   font-weight: 700;
+}
+
+.Login-container {
+  position: absolute;
+  left: 35%;
+  height: 600px;
+  top: 25%;
+  background-color: aliceblue;
+  width: 600px;
+  padding: 30px 50px;
+  justify-content: space-around;
+  border-radius: 9px;
+  display: flex;
+  border: #1d3557 1px solid;
+}
+
+.login {
+  display: flex;
+
+  flex-direction: column;
+  color: #1d3557;
+  gap: 30px;
+}
+form {
+  display: grid;
+  gap: 20px;
+}
+h1 {
+  color: #1d3557;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 29px;
+}
+.submit {
+  width: 200px;
+}
+.hidden {
+  opacity: 0;
+}
+.login-links {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
 }
