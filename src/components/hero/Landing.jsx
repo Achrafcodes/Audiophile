@@ -7,6 +7,7 @@ import Watch from './Home/catbanner-02.jpg';
 import TAb from './Home/catbanner-03.jpg';
 import casque from './Home/catbanner-04.jpg';
 import Imges from './Imges';
+import Hero from './Home/Hero';
 function Landing() {
   const images = [Image1, Image2];
   const captions = [
@@ -16,6 +17,7 @@ function Landing() {
 
   return (
     <div className="hero">
+      <Hero />
       <div className="Landing">
         <Slider images={images} captions={captions} />
         <div className="images">
@@ -24,19 +26,6 @@ function Landing() {
           <Imges image={TAb} name="Tablettes" />
           <Imges image={casque} name="earPhone" />
         </div>
-      </div>
-      <div className=" texts">
-        <h1 className="tittle">
-          "Power Up Your Projects with the{' '}
-          <span className="span">Best Developer Tools and Resources</span>"
-        </h1>{' '}
-        <p className="discription">
-          Find the electronics and gadgets you need to take your coding skills
-          to the next level at our developer store. From laptops to keyboards to
-          monitors, we've got you covered. Shop now and get ready to code like a
-          pro!
-        </p>
-        <button>Shop now</button>
       </div>
     </div>
   );

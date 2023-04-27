@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
 /* Box sizing reset */
 
 * {
@@ -6,7 +7,6 @@
   margin: 0;
   padding: 0;
 }
-
 /* Global font settings */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -14,7 +14,6 @@ body {
   line-height: 1.5;
   background-color: var(--color-secondary-light);
   padding: 1rem 2rem;
-
   font-weight: 400;
   color: #333;
 }
@@ -63,6 +62,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #333333;
 }
 
 /* Images */
@@ -87,7 +87,13 @@ input[type='submit'] {
 
 button:hover,
 input[type='submit']:hover {
-  background-color: #0069d9;
+  background-color: #baddf1;
+  color: black;
+}
+
+.texts button {
+  background-color: #fff;
+  color: #1d3557;
 }
 
 /* Form inputs */
@@ -114,15 +120,14 @@ textarea:focus {
 
 /* Responsive utility classes */
 @media screen and (max-width: 576px) {
-  .sm\:text-center {
+  .sm:text-center {
     text-align: center;
   }
 
-  .sm\:mt-4 {
+  .sm:mt-4 {
     margin-top: 1rem;
   }
 }
-
 :root {
   /* Base Colors */
   --color-primary: #bdbdc7;
@@ -146,13 +151,67 @@ textarea:focus {
   --spacing-l: 32px;
   --spacing-xl: 48px;
   --spacing-xxl: 64px;
-fdsafds
+
   /* Border */
   --border-radius: 4px;
 
   /* Box Shadow */
   --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .span {
   color: var(--color-accent-blue);
+}
+
+.texts {
+  padding-left: 30px;
+  gap: 30px;
+  margin-top: 100px;
+  display: flex;
+  margin-bottom: 100px;
+  flex-direction: column;
+}
+.logo span {
+  color: #bdbdc7;
+}
+.main-landing {
+  height: 850px;
+  margin-bottom: 30px;
+  margin-top: -100px;
+  display: flex;
+  border-radius: 9px;
+  align-items: center;
+  background: url('components/hero/Home/wave.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  gap: 100px;
+}
+.main-landing img {
+  background-color: #baddf1;
+  border-radius: 30% 70% 64% 36% / 30% 30% 70% 70%;
+  right: 100px;
+  position: absolute;
+}
+/* Color combination for the hero section */
+/*  */
+/*  */
+/*  */
+
+.hero-imgs {
+  height: 500px;
+  width: 400px;
+}
+
+.texts button {
+  background-color: #1d3557;
+  color: #e0e0e0;
+  border-radius: 9px;
+}
+
+.texts p {
+  color: var(--color-secondary-dark);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.texts h1 {
+  font-family: 'Ubuntu', sans-serif;
 }

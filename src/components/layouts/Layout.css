@@ -1,5 +1,6 @@
-.Container {
+.nav-Container {
   @apply flex justify-between;
+  padding: 0 50px;
 }
 .nav-links {
   @apply flex gap-5;
