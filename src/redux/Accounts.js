@@ -1,14 +1,22 @@
-const account1 = {
-  owner: 'Achraf Essoussy',
-  pin: 1111
-};
+const accounts = [
+  {
+    username: 'Achraf',
+    password: '1111'
+  },
+  {
+    username: 'Isslam',
+    password: '2222'
+  },
+  {
+    username: 'John',
+    password: '3333'
+  },
+  {
+    username: 'Jane',
+    password: '4444'
+  }
+];
 
-const account2 = {
-  owner: 'Tiny Smash',
-  pin: 2222
-};
-
-const accounts = [account1, account2];
 export default accounts;
 
 // const createUsernames = function (accs) {
@@ -19,7 +27,8 @@ export default accounts;
 //       .map(name => name[0])
 //       .join('');
 //   });
-// };
+// };sudo apt install update-manager-core
+
 // createUsernames(accounts);
 
 // const updateUI = function (acc) {

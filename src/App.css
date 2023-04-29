@@ -87,8 +87,8 @@ input[type='submit'] {
 
 button:hover,
 input[type='submit']:hover {
-  background-color: #baddf1;
-  color: black;
+  background-color: #457b9d;
+  color: #fff;
 }
 
 .texts button {
@@ -107,15 +107,6 @@ textarea {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   width: 100%;
-}
-
-input[type='text']:focus,
-input[type='email']:focus,
-input[type='password']:focus,
-textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  outline: none;
 }
 
 /* Responsive utility classes */
@@ -216,5 +207,5 @@ textarea:focus {
   font-family: 'Ubuntu', sans-serif;
 }
 .blur {
-  filter: blur(5px);
+  filter: blur(20px);
 }
