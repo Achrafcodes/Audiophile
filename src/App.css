@@ -209,3 +209,7 @@ textarea {
 .blur {
   filter: blur(20px);
 }
+.username {
+  color: #1d3557;
+  text-decoration: underline;
+}

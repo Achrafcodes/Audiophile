@@ -143,3 +143,7 @@ form .login-input::placeholder {
   text-decoration: underline;
   font-family: 'ubuntu';
 }
+.username {
+  color: #1d3557;
+  text-decoration: underline;
+}
