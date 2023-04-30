@@ -1,0 +1,13 @@
+.FormContainer {
+  background-image: linear-gradient(
+    to right top,
+    #baddf1,
+    #8eb0c9,
+    #6585a2,
+    #405b7c,
+    #1d3557
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

@@ -143,3 +143,7 @@ form .login-input::placeholder {
   text-decoration: underline;
   font-family: 'ubuntu';
 }
+.error {
+  color: #e63946;
+  font-size: 18px;
+}

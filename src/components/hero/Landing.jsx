@@ -16,7 +16,7 @@ function Landing() {
   ];
 
   return (
-    <div className="hero">
+    <div className=" hero">
       <Hero />
       <div className="Landing">
         <Slider images={images} captions={captions} />

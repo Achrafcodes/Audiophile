@@ -207,11 +207,20 @@ textarea {
   font-family: 'Ubuntu', sans-serif;
 }
 .blur {
-  filter: blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(0.2);
+  z-index: 1;
 }
-.user {
-  font-size: 60px;
+span .user {
+  font-size: 35px;
   color: #1d3557;
-
+  transition: all 0.4s ease-in;
   cursor: pointer;
+}
+span .user:hover {
+  color: #bdbdc7;
 }
