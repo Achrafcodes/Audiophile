@@ -3,11 +3,13 @@ import './Layout.css'; // import Layout.css
 import GoogleIcon from '@mui/icons-material/Google'; // import GoogleIcon from '@mui/icons-material/Google'
 import GitHubIcon from '@mui/icons-material/GitHub'; // import GitHubIcon from '@mui/icons-material/GitHub'
 import { useDispatch, useSelector } from 'react-redux'; // import useDispatch and useSelector from 'react-redux'
-import { Login, Logout } from '../../redux/loginRedux'; // import Login and Logout from '../../redux/loginRedux'
+import { Login, Logout, UserData } from '../../redux/loginRedux'; // import Login and Logout from '../../redux/loginRedux'
 import accounts from '../../redux/Accounts'; // import accounts from '../../redux/Accounts'
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useNavigate } from 'react-router-dom';
 function NavBar() {
   let dispatch = useDispatch();
+  let navigate = useNavigate();
   let [formdata, setformData] = useState({
     username: '',
     password: ''
@@ -41,11 +43,17 @@ function NavBar() {
     if (account) {
       dispatch(Login());
       setShowLogin(false);
+      dispatch(UserData(formdata));
     } else {
       console.log('not valide');
     }
     console.log(isLoggedIn);
   };
+  let AccountData = function (e) {
+    e.preventDefault();
+    navigate('/user');
+  };
+  console.log(isLoggedIn);
   return (
     <>
       <div className="nav-Container">
@@ -63,7 +71,7 @@ function NavBar() {
             <a href="#">Items</a>
           </li>
           {isLoggedIn ? (
-            <h2 className="username">{formdata.username}</h2>
+            <AccountCircleIcon onClick={AccountData} className="user" />
           ) : (
             <button onClick={showLogin}>Login</button>
           )}
