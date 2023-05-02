@@ -7,6 +7,8 @@ import { Login, Logout, UserData } from '../../redux/loginRedux';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useNavigate } from 'react-router-dom';
 import accounts from '../../redux/Accounts';
+import Logincomponent from './Login';
+import Draw from '../../assets/Gravity/undraw_authentication_re_svpt.svg';
 
 /**
  * A React component representing the navigation bar for the application.
@@ -14,6 +16,15 @@ import accounts from '../../redux/Accounts';
  * @returns {JSX.Element} The JSX element representing the navigation bar.
  */
 function NavBar() {
+  let addBlur = function () {
+    let hero = document.querySelector('.hero');
+    hero.classList.add('blur');
+  };
+  let removeBlur = function () {
+    let hero = document.querySelector('.hero');
+
+    hero.classList.remove('blur');
+  };
   const dispatch = useDispatch(); // Retrieve the `dispatch` function from the Redux store.
   const navigate = useNavigate(); // Retrieve the `navigate` function from the `react-router-dom` package.
   const [formdata, setformData] = useState({
@@ -32,6 +43,7 @@ function NavBar() {
   const showLogin = function (e) {
     e.preventDefault();
     setShowLogin(true);
+    addBlur();
   };
 
   /**
@@ -42,6 +54,7 @@ function NavBar() {
   const hideLogin = function (e) {
     e.preventDefault();
     setShowLogin(false);
+    removeBlur();
   };
 
   /**
@@ -75,6 +88,7 @@ function NavBar() {
       dispatch(Login()); // Dispatch the `Login` action to the Redux store.
       setShowLogin(false); // Hide the login component.
       dispatch(UserData(formdata)); // Dispatch the `UserData` action to the Redux store with the user's data.
+      removeBlur();
     } else {
       alert('Invalid username or password!'); // Show an alert if the user's credentials are invalid.
     }
@@ -120,53 +134,15 @@ function NavBar() {
         id="Login"
         className={showLogincomp ? 'Login-container' : 'hidden Login-container'}
       >
-        <div className="login">
-          <h1>
-            Coder'<span>Store</span>
-          </h1>
-          <form onSubmit={handleSubmit} action="">
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              className="login-input"
-              onChange={handleChange}
-              placeholder="Username"
-              name="username"
-              id="username"
-            />
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              className="login-input"
-              onChange={handleChange}
-              placeholder="Password"
-              name="password"
-              id="password"
-            />
-            <p className="hidden error">please enter some valid information</p>
-            <div className="login-links">
-              <h3 onClick={hideLogin} className="back">
-                Back
-              </h3>
-              <button className="submit">Submit</button>
-            </div>
-          </form>
-          <div className="icons">
-            <button className="google">
-              LOGIN WITH GOOGLE{' '}
-              <span>
-                <GoogleIcon className="icon google" />
-              </span>
-            </button>
-            <button className="github">
-              LOGIN WITH GITHUB{' '}
-              <span>
-                <GitHubIcon className="icon github" />
-              </span>
-            </button>
-          </div>
-          <p className="forgot">Forgotten your password?</p>
-        </div>
+        <div className="imgLogin">
+          {' '}
+          <img src={Draw} alt="" />{' '}
+        </div>{' '}
+        <Logincomponent
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          hideLogin={hideLogin}
+        />
       </div>
     </>
   );
