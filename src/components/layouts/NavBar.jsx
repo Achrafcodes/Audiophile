@@ -58,7 +58,7 @@ function NavBar() {
       };
     });
   };
-
+  // test
   /**
    * Function to handle the login form submission. Checks if the user's credentials are valid, dispatches a `Login` action to the Redux store, and navigates to the user's account page.
    * @function handleSubmit
