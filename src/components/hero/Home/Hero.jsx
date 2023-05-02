@@ -1,8 +1,12 @@
 import React from 'react';
-import uli1 from '../Home/undraw_coding_re_iv62.svg';
-import uli2 from '../Home/undraw_coding_re_iv62.svg';
 import uli3 from '../Home/undraw_programming_re_kg9v.svg';
+import { useNavigate } from 'react-router-dom';
 export default function Hero() {
+  let navigate = useNavigate();
+  function startShoping(e) {
+    e.preventDefault();
+    navigate('/categories');
+  }
   return (
     <div>
       {' '}
@@ -18,7 +22,7 @@ export default function Hero() {
             to monitors, we've got you covered. Shop now and get ready to code
             like a pro!
           </p>
-          <button>Shop now</button>
+          <button onClick={startShoping}>Shop now</button>
         </div>
         {/* <img className="hero-imgs" src={uli1} alt="" />
         {/* <img className="hero-imgs" src={uli2} alt="" /> */}

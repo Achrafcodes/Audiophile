@@ -90,7 +90,7 @@ function NavBar() {
       dispatch(UserData(formdata)); // Dispatch the `UserData` action to the Redux store with the user's data.
       removeBlur();
     } else {
-      alert('Invalid username or password!'); // Show an alert if the user's credentials are invalid.
+      document.querySelector('.error').classList.remove('hidden'); // Show an alert if the user's credentials are invalid.
     }
   };
 
