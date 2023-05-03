@@ -2,16 +2,23 @@ import { createSlice } from '@reduxjs/toolkit';
 import { products } from '../products';
 
 const initialState = {
-  items: products
+  items: products,
+  selectedCategory: null
 };
 
-export const itemsSlice = createSlice({
-  name: 'items',
+export const productsSlice = createSlice({
+  name: 'products',
   initialState,
-  reducers: {}
+  reducers: {
+    selectCategory: (state, action) => {
+      state.selectedCategory = action.payload;
+    }
+  }
 });
 
 export const selectItemById = (state, id) =>
-  state.items.items.find(item => item.id === id);
+  state.products.items.find(item => item.id === id);
 
-export default itemsSlice;
+export const selectCategory = state => state.products.selectedCategory;
+
+export default productsSlice;

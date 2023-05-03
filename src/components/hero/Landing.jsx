@@ -1,12 +1,12 @@
 import React from 'react';
-import Slider from './Slider';
+import Slider from '../Slider/Slider';
 import Image1 from './Home/main-banner-1.jpg';
 import Image2 from './Home/main-banner.jpg';
 import Mac from './Home/catbanner-01.jpg';
 import Watch from './Home/catbanner-02.jpg';
 import TAb from './Home/catbanner-03.jpg';
 import casque from './Home/catbanner-04.jpg';
-import Imges from './Imges';
+import Imges from '../Slider/Imges';
 import Hero from './Home/Hero';
 function Landing() {
   const images = [Image1, Image2];

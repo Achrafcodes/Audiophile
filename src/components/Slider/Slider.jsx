@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './slideStyle.css';
-import SlideImage from './SlideImage';
+import SlideImage from '../Slider/SlideImage';
 /**
  * A slider component that displays a series of images and
  * associated captions in a sliding carousel.

@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux';
-import { selectItemById } from './redux/ProductSlice';
-function ProductDetails({ id }) {
+import { selectItemById } from '../../redux/ProductSlice';
+import { cartSlice } from '../../redux/cartSlice';
+
+function ProductDetails({ id, category }) {
   const item = useSelector(state => selectItemById(state, id));
 
   return (
